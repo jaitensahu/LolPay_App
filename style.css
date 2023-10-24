@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.page1, .page2,.page3,.page4,.page5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.page1{
+    display: flex;
+}
+.firstPage, .secondPage,.thirdPage,.fourthPage,.lastPage{
+    min-width: 350px;
+    width: 350px;
+    max-width: 350px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    /* display: none; */
+}
+.inputnumber{
+display: none;
+}
+.secondPage{
+    flex-direction: column;
+}
+
+.inputAmount{
+    display: none;
+}
+.thirdPage{
+    flex-direction: column;
+}
+.thirdPage input{
+    margin: 10px 0;
+}
+.fourthPage{
+    flex-direction: column;
+}
+.firstPage{
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 20px;
+}
+.firstPage form input{
+    border: none;
+    background-color: transparent;
+    padding: 10px 0px;
+    outline: none;
+}
+.firstPage form{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 0 10px;
+    width: 100%;
+}
+.firstPage button{
+    padding: 5px 30px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+}
+.tagline{
+    font-size: 12px;
+    /* margin-top: -20px; */
+}
+.hero h1{
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+.hero{
+    width: 100%;
+    height: 150px;
+    /* background-color: rgb(109, 107, 107); */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.icons{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.icons p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.icons span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px ;
+    margin-bottom: 20px;
+}
+
+.icons i{
+    font-size: 24px;
+}
+
+.secondPage form img{
+    width: 25px;
+    /* height: 20px; */
+}
+.secondPage{
+    /* width: 100%; */
+    padding: 20px;
+    justify-content: start;
+    align-content: start;
+    flex-wrap: wrap;
+}
+.secondPage form input{
+    border: none;
+    outline: none;
+    height: 100%;
+    background-color: transparent;
+    /* padding: 10px 0; */
+    width: 100%;
+}
+
+.secondPage form{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    border: 1px solid rgb(95, 150, 252);
+    align-items: center;
+    margin: 10px 0 100px;
+}
+
+input{
+    color: white;
+}
+
+.secondPage label{
+    text-align: start;
+    width: 100%;
+    font-size: 24px;
+}
+.secondPage p{
+width: 100%;
+font-size: 12px;
+margin: 5px 0;
+}
+.secondPage form p{
+    font-size: 12px;
+    width: fit-content;
+}
+.secondPage button{
+    position: absolute;
+    bottom: 73px;
+    border-radius: 0 0 30px 30px;
+    width: 350px;
+    padding: 20px 0;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    font-weight: bold;
+}
+.ErrorMsg{
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    /* margin-top: 50px; */
+    /* color: red; */
+}
+
+.thirdPage{
+    width: 350px;
+    justify-content: space-between;
+    padding: 30px 0 0px;
+   
+    /* height: 100%; */
+}
+.thirdPage div{
+    text-align: center;
+}
+.thirdPage div form{
+    background-color: transparent;
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thirdPage div form input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 32px;
+    margin-left: 20px;
+}
+.thirdPage button{
+    width: 100%;
+    /* position: relative; */
+    /* bottom: 0; */
+    padding: 20px;
+    border-radius: 0 0 30px 30px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Absolute Center Spinner */
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: visible;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* Transparent Overlay */
+  .loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+  }
+  
+  /* :not(:required) hides these rules from IE9 and below */
+  .loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -moz-animation: spinner 1500ms infinite linear;
+    -ms-animation: spinner 1500ms infinite linear;
+    -o-animation: spinner 1500ms infinite linear;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  }
+  
+  /* Animation */
+  
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-o-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .loading{
+    display: none;
+  }
+  .fourthPage{
+    justify-content: space-between;
+  }
+  .fourthPage form{
+    display: flex;
+    flex-direction: column;
+    margin-top: -100px;
+  }
+
+  .fourthPage form input{
+    background-color: transparent;
+    margin-top: 20px;
+    padding: 5pxpx 0;
+    width: 160px;
+    border: none;
+    border-bottom: 2px dashed white;
+    font-size: 24px;
+    outline: none;
+    letter-spacing: 18px;
+  }
+  .top{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .warning{
+    margin-top: -100px;
+    width: 80%;
+    color: black;
+    background-color: rgb(252, 198, 90);
+    border-radius: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .fourthPage button{
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 0 0 30px 30px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    font-weight: bold;
+  }
+.lastPage{
+    flex-direction: column;
+}
+
+.fa-arrow-left{
+    position: fixed;
+    top: 100px;
+    left: 40%;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .success-checkmark {
+    width: 80px;
+    height: 115px;
+    margin: 0 auto;
+    
+    .check-icon {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        border-radius: 50%;
+        box-sizing: content-box;
+        border: 4px solid #4CAF50;
+        
+        &::before {
+            top: 3px;
+            left: -2px;
+            width: 30px;
+            transform-origin: 100% 50%;
+            border-radius: 100px 0 0 100px;
+        }
+        
+        &::after {
+            top: 0;
+            left: 30px;
+            width: 60px;
+            transform-origin: 0 50%;
+            border-radius: 0 100px 100px 0;
+            animation: rotate-circle 4.25s ease-in;
+        }
+        
+        &::before, &::after {
+            content: '';
+            height: 100px;
+            position: absolute;
+            background: transparent;
+            transform: rotate(-45deg);
+        }
+        
+        .icon-line {
+            height: 5px;
+            background-color: #4CAF50;
+            display: block;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 10;
+            
+            &.line-tip {
+                top: 46px;
+                left: 14px;
+                width: 25px;
+                transform: rotate(45deg);
+                animation: icon-line-tip 0.75s;
+            }
+            
+            &.line-long {
+                top: 38px;
+                right: 8px;
+                width: 47px;
+                transform: rotate(-45deg);
+                animation: icon-line-long 0.75s;
+            }
+        }
+        
+        .icon-circle {
+            top: -4px;
+            left: -4px;
+            z-index: 10;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            box-sizing: content-box;
+            border: 4px solid rgba(76, 175, 80, .5);
+        }
+        
+        .icon-fix {
+            top: 8px;
+            width: 5px;
+            left: 26px;
+            z-index: 1;
+            height: 85px;
+            position: absolute;
+            transform: rotate(-45deg);
+            background-color: transparent;
+        }
+    }
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(-45deg);
+    }
+    5% {
+        transform: rotate(-45deg);
+    }
+    12% {
+        transform: rotate(-405deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes icon-line-tip {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+    100% {
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+
+@keyframes icon-line-long {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    84% {
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+    100% {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}

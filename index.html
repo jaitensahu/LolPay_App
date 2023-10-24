@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google pay UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="page1">
+        <div class="firstPage">
+            <form action="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text">
+            </form>
+            <div class="hero">
+                <h1><span>LOLPay</span> <span class="tagline">Payments that'll make you LOL, every time</span> </h1>
+            </div>
+            <div class="icons">
+                <span><i class="fa-solid fa-qrcode"></i>
+                    <p>Scan any <br> QR code</p>
+                </span>
+                <span><i class="fa-solid fa-address-book"></i>
+                    <p>Pay<br>contacts</p>
+                </span>
+                <span><i class="fa-solid fa-building-columns"></i>
+                    <p>Bank<br>Transfer</p>
+                </span>
+                <span><i class="fa-solid fa-bullseye"></i>
+                    <p>Pay UPI <br>ID or number</p>
+                </span>
+                <span><i class="fa-solid fa-user"></i>
+                    <p>Self<br>brtransfer</p>
+                </span>
+                <span><i class="fa-solid fa-file-invoice-dollar"></i>
+                    <p>Pay bills</p>
+                </span>
+                <span><i class="fa-solid fa-mobile-screen"></i></i>
+                    <p>Mobile <br>Recharge</p>
+                </span>
+
+            </div>
+            <button>Pay By <br>Phone Number</button>
+        </div>
+    </section>
+
+    <section class="page2">
+        <div class="secondPage">
+
+            <label for="">Enter a phone number</label>
+            <p>Pay any UPI app using phone number</p>
+            <form action="">
+                <img src="https://cdn-icons-png.flaticon.com/512/321/321238.png" alt="">
+                <p>+91-</p>
+                <input type="text">
+            </form>
+            <p class="ErrorMsg"></p>
+            <button>Pay Now</button>
+        </div>
+    </section>
+
+    <section class="page3">
+        <div class="thirdPage">
+            <div>
+                <h3>Paying User</3>
+                    <h5 >+91-<span class="phoneNo">8109333967</span></h5>
+                    <h5>Banking Name: ABC</h5>
+                    <!-- <label for="rs">Enter Amount in RS</label> -->
+                    <form action="">
+                        <span>Rs</span>
+                        <input type="text" id="rs" placeholder="0">
+                    </form>
+            </div>
+            <button>Proceed to Pay</button>
+        </div>
+    </section>
+
+    <section class="page4">
+        <div class="fourthPage">
+            <div class="top">
+                <h6>State Bank of India</h6>
+                <h6>xxxxx<span class="lastFour"></span></h6>
+            </div>
+
+            
+            <form action="">
+                <label for="pin">ENTER 6- DIGIT UPI PIN</label>
+                <input type="password" id="pass" maxlength="6">
+            </form>
+
+            <div class="warning">
+                You are transferring money from your account to
+                <span class="entered_no"></span>
+            </div>
+            <button>Pay</button>
+        </div>
+    </section>
+
+    <section class="page5">
+
+        <div class="lastPage">
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="success-checkmark">
+                <div class="check-icon">
+                  <span class="icon-line line-tip"></span>
+                  <span class="icon-line line-long"></span>
+                  <div class="icon-circle"></div>
+                  <div class="icon-fix"></div>
+                </div>
+              </div>
+              
+            <p>success</p>
+        </div>
+    </section>
+    <audio src="./google-pay-succes-sound-google-pay-transaction-sound-google-pay-notification-t_sX3urU1T.mp3"></audio>
+    <div class="loading">Loading&#8230;</div>
+    <script src="https://kit.fontawesome.com/7c5861f7d9.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
